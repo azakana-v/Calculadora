@@ -1,0 +1,169 @@
+:root{
+    --black: rgb(37, 37, 37);
+    --darkRed: rgb(61, 0, 0);
+    --mediumRed: rgb(149, 1, 1);
+    --lightRed: rgb(255, 0, 0);
+    --trueBlack: rgb(0, 0, 0);
+}
+body{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    justify-content: center;
+    background-color: var(--black);
+    background-image: url("abstract-dark-colour-tma-fon.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+}
+
+.container .calculadora{
+    display: grid;
+    justify-content: center;
+    background-color: var(--black);
+    padding: 30px;
+      box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
+    /* border: 1px solid blue; */
+    grid-template-areas: 
+    'display display display display'
+    'sete oito nove mais'
+    'quatro cinco seis menos'
+    'um dois tres vezes'
+    'ce ce zero dividido'
+    'igual igual igual igual'
+    ;
+}
+
+.container .calculadora:before {
+  content: "";
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgba(247, 96, 96, 0.5);
+  filter: blur(10px);
+  margin: -20px;
+}
+
+.container .calculadora div {
+    min-width: 80px;
+    min-height:80px;
+}
+
+.container .calculadora div button{
+    width: 94%;
+    height: 94%;
+    background-color: var(--mediumRed);
+    border-top-color: var(--mediumRed);
+    border-left-color: var(--mediumRed);
+    border-right-color: var(--mediumRed);
+    border-bottom-color: var(--lightRed);
+    border-radius: 10px;
+    border-style: solid;
+    cursor: pointer;
+    font-size: 24px;
+    font-family: 'Orbitron', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255);
+}
+.container .calculadora div button:active{
+    background-color: var(--darkRed);
+}
+
+
+
+#display{
+    grid-area: display;
+    display: flex;
+    padding-right: 5%;
+    justify-content: end;
+    background-color: var(--darkRed);
+    border-top-color: var(--darkRed);
+    border-left-color: var(--darkRed);
+    border-right-color: var(--darkRed);
+    border-bottom-color: var(--trueBlack);
+    border-radius: 7px;
+    border-style: solid;
+    margin-bottom: 10px;
+}
+
+#display .content{
+   color: rgb(248, 248, 248);
+   font-size: 25px;
+   font-family: 'Bebas Neue', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+#ce{
+    grid-area: ce;
+}
+#nove{
+    grid-area: nove;
+}
+#oito{
+    grid-area: oito;
+}
+#sete{
+    grid-area: sete;
+}
+#seis{
+    grid-area: seis;
+}
+#cinco{
+    grid-area: cinco;
+}
+#quatro{
+    grid-area: quatro;
+}
+#tres{
+    grid-area: tres;
+}
+#dois{
+    grid-area: dois;
+}
+#um{
+    grid-area: um;
+}
+#mais{
+    grid-area: mais;
+}
+#menos{
+    grid-area: menos;
+}
+#vezes{
+    grid-area: vezes;
+}
+#dividido{
+    grid-area: dividido;
+}
+#igual{
+    grid-area: igual;
+    margin-top: 5%;
+}
+
+
+#igual .content{
+    color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 100%;
+    background-color: rgb(255, 255, 255);
+ }
+
+ #igual .content:active{
+    background-color: rgb(93, 139, 190);
+}
+
+
